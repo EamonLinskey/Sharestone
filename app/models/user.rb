@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   validates :Hearthpwn_Name, :Blizzard_ID, presence: true
   validates_format_of :Blizzard_ID, :with => /\A.+[#]\d{4}\z/
+  
+  has_one :profile
 end

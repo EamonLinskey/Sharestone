@@ -31,6 +31,6 @@ class ContactsController < ApplicationController
       # To collect data from form we need to use strong paramaters and 
       # whitelist form fields
       def contact_params
-         params.require(:contact).permit(:name, :email, :comments, :Blizzard_ID, :Hearthpwn_Name)
+         params.require(:contact).permit(:name, :email, :comments)
       end
 end
