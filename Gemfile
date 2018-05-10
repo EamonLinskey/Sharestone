@@ -39,7 +39,11 @@ gem 'bootstrap-sass', '3.3.7'
 # Use Jquery throught front-end UI
 gem 'jquery-rails'
 
+# Use Hirb gem for better console data presentation
+gem 'hirb', '0.7.3'
 
+# Use Devise for user authentication
+gem 'devise'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
