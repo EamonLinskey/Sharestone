@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-6 col-md-offset-3">
       <div class="well">
-        <h2>Sign up</h2>
+        <h2>Register</h2>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
           <div class="field form-group">
@@ -11,14 +11,24 @@
           </div>
           <div class="field form-group">
             <%= f.label :password %>
-            <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% if @minimum_password_length %></br>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
             <% end %>
             <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
           </div>
           <div class="field form-group">
             <%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+          </div>
+          <div class="field form-group">
+            <%= f.label "Hearthpwn username" %></br>
+            <em>(to view your public collection)</em>
+            <%= f.text_field :Hearthpwn_Name, autocomplete: "off", class: 'form-control' %>
+          </div>
+          <div class="field form-group">
+            <%= f.label "Blizard username" %></br>
+            <em>(must end with # then 4 digits)</em>
+            <%= f.text_field :Blizzard_ID, autocomplete: "off", class: 'form-control' %>
           </div>
           <div class="actions form-group">
             <%= f.submit "Sign up", class: 'btn btn-success' %>
